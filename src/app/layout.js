@@ -1,6 +1,5 @@
 import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
-import NavbarComponent from "@/app/components/NavbarComponent";
+import NavbarComponent from "@/app/components/HeaderComponent";
 import '@/app/globals.css';
 import '@/app/styles/welcomecard.webflow.css';
 import '@/app/styles/webflow.css';
