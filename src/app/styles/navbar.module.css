@@ -1,0 +1,120 @@
+/* General Styles */
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 10%;
+  background-color: #fff;
+  position: relative;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menuButton {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 30px;
+  color: #1e1363; /* Dark blue color */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menuIcon,
+.menuIcon::before,
+.menuIcon::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #1e1363;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menuIcon.open {
+  transform: rotate(45deg);
+}
+
+.menuIcon.open::before {
+  transform: translateY(0) rotate(90deg);
+}
+
+.menuIcon.open::after {
+  transform: translateY(-12px) rotate(90deg);
+}
+
+.navbarMenu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 18px;
+  color: #1e1363;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #3b3bf9;
+}
+
+.buttonPrimary {
+  padding: 10px 20px;
+  background-color: #6a0dad;
+  color: #fff;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.buttonPrimary:hover {
+  background-color: #5a008e;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menuButton {
+    display: flex;
+  }
+
+  .navbarMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px 0;
+  }
+
+  .navbarMenu.showMenu {
+    display: flex;
+  }
+
+  .navLink {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .buttonPrimary {
+    margin: 15px auto;
+    width: 80%;
+  }
+}
